@@ -1,0 +1,25 @@
+[01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:[m[K In function ‘[01m[Koscc_close[m[K’:
+[01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:108:40:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kchannel[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  108 | oscc_result_t oscc_close( [01;35m[Kunsigned int channel[m[K )
+      |                           [01;35m[K~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:[m[K In function ‘[01m[Koscc_update_status[m[K’:
+[01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:459:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksig[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  459 | void oscc_update_status( [01;35m[Kint sig[m[K, siginfo_t *siginfo, void *context )
+      |                          [01;35m[K~~~~^~~[m[K
+[01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:459:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksiginfo[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  459 | void oscc_update_status( int sig, [01;35m[Ksiginfo_t *siginfo[m[K, void *context )
+      |                                   [01;35m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:459:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcontext[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  459 | void oscc_update_status( int sig, siginfo_t *siginfo, [01;35m[Kvoid *context[m[K )
+      |                                                       [01;35m[K~~~~~~^~~~~~~[m[K
+[01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:[m[K In function ‘[01m[Kconstruct_interfaces_list[m[K’:
+[01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:971:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+  971 |         for ( i = 0; i [01;35m[K<[m[K lines; i++ )
+      |                        [01;35m[K^[m[K
+[01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:994:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+  994 |         while ( size [01;35m[K<[m[K lines && fgets( buffer, sizeof( buffer ), file_handler ) ) {
+      |                      [01;35m[K^[m[K
+[01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:[m[K In function ‘[01m[Kget_device_name[m[K’:
+[01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:1078:18:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Knew_name[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+ 1078 |             char [01;35m[Knew_name[m[K[IFNAMSIZ];
+      |                  [01;35m[K^~~~~~~~[m[K

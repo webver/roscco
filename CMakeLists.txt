@@ -283,9 +283,9 @@ install(
         ${PROJECT_NAME}_node
         ${PROJECT_NAME}_oscc_to_ros
         ${PROJECT_NAME}_ros_to_oscc
-        ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-        LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-        RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+        ARCHIVE DESTINATION lib/${PROJECT_NAME}
+        LIBRARY DESTINATION lib/${PROJECT_NAME}
+        RUNTIME DESTINATION lib/${PROJECT_NAME}
 )
 
 install(
@@ -295,6 +295,17 @@ install(
         DESTINATION lib/${PROJECT_NAME}
         FILES_MATCHING PATTERN "*.h"
 )
+
+if (EXAMPLE)
+
+    install(
+            TARGETS
+            ${PROJECT_NAME}_teleop
+            ARCHIVE DESTINATION lib/${PROJECT_NAME}
+            LIBRARY DESTINATION lib/${PROJECT_NAME}
+            RUNTIME DESTINATION lib/${PROJECT_NAME}
+    )
+endif ()
 
 
 

@@ -1,0 +1,6 @@
+Invoking command in '/home/roman/dev_ws/src/roscco/build/roscco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/roman/dev_ws/src/roscco -DVEHICLE=kia_soul -DEXAMPLE=ON -DCMAKE_INSTALL_PREFIX=/home/roman/dev_ws/src/roscco/install/roscco
+Invoked command in '/home/roman/dev_ws/src/roscco/build/roscco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/roman/dev_ws/src/roscco -DVEHICLE=kia_soul -DEXAMPLE=ON -DCMAKE_INSTALL_PREFIX=/home/roman/dev_ws/src/roscco/install/roscco
+Invoking command in '/home/roman/dev_ws/src/roscco/build/roscco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/roman/dev_ws/src/roscco/build/roscco -- -j8 -l8
+Invoked command in '/home/roman/dev_ws/src/roscco/build/roscco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/roman/dev_ws/src/roscco/build/roscco -- -j8 -l8
+Invoking command in '/home/roman/dev_ws/src/roscco/build/roscco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/roman/dev_ws/src/roscco/build/roscco
+Invoked command in '/home/roman/dev_ws/src/roscco/build/roscco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/roman/dev_ws/src/roscco/build/roscco

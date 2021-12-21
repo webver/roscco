@@ -12,10 +12,9 @@ extern "C" {
 int main(int argc, char *argv[]) {
     rclcpp::init(argc, argv);
     auto public_nh = rclcpp::Node::make_shared("roscco_node");
-    auto private_nh = rclcpp::Node::make_shared("~");
 
     int can_channel = 0;
-//    private_nh->set_parameter("can_channel", can_channel, 0);
+//    public_nh->set_parameter("can_channel", can_channel, 0);
 
     oscc_result_t ret = OSCC_ERROR;
 
@@ -25,8 +24,8 @@ int main(int argc, char *argv[]) {
         RCLCPP_INFO(public_nh->get_logger(), "Could not initialize OSCC");
     }
 
-    RosToOscc subcriber(public_nh, private_nh);
-    OsccToRos publisher(public_nh, private_nh);
+    RosToOscc subcriber(public_nh);
+    OsccToRos publisher(public_nh);
 
     rclcpp::spin(public_nh);
 

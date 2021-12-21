@@ -25,11 +25,11 @@ are using. See the [release page](https://github.com/PolySync/roscco/releases)
 for information about what releases ROSCCO points to.
 
 ```
-mkdir -p catkin_ws/src && cd catkin_ws/src
+mkdir -p dev_ws/src && cd dev_ws/src
 git clone --recursive https://github.com/PolySync/roscco.git
 cd ..
-source /opt/ros/kinetic/setup.bash
-catkin_make -DKIA_SOUL=ON
+source /opt/ros/galactic/local_setup.bash
+colcon build --packages-select roscco --cmake-args -DVEHICLE=kia_soul
 ```
 
 ## Usage
@@ -37,11 +37,11 @@ catkin_make -DKIA_SOUL=ON
 ### Game Controller Example
 
 ROSCCO comes with a joystick message conversion example to work with. To make
-use of this, build the project with example turned on from your `catkin_ws`
+use of this, build the project with example turned on from your `dev_ws`
 directory:
 
 ```
-catkin_make -DKIA_SOUL=ON -DEXAMPLE=ON
+colcon build --cmake-args -DVEHICLE=kia_soul -DEXAMPLE=ON
 ```
 
 This example has been used with a Logitech F310 and an Xbox 360 controller
@@ -63,10 +63,16 @@ sudo apt-get install ros-kinetic-joy
 [joystick documentation](http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick).
 
 ```
+#enable can0
 sudo ip link set can0 type can bitrate 500000
 sudo ip link set up can0
-source devel/setup.bash
-roslaunch src/roscco/example/example.launch
+
+#setup enviroment
+source install/local_setup.bash
+
+#run
+ros2 run roscco roscco_teleop
+ros2 run roscco roscco_node
 ```
 
 The roscco_teleop converts the joy messages from the joy_node into messages
@@ -104,6 +110,7 @@ git clone --recursive https://github.com/PolySync/roscco.git
 cd ..
 catkin_make -DCATKIN_ENABLE_TESTING=0 -DKIA_SOUL_EV=ON -DAPOLLO=ON
 source devel/setup.bash
+
 ```
 
 #### Running ROSCCO with Apollo

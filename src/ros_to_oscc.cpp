@@ -2,8 +2,7 @@
 
 using std::placeholders::_1;
 
-RosToOscc::RosToOscc(rclcpp::Node::SharedPtr public_nh, rclcpp::Node::SharedPtr private_nh) : public_nh(public_nh),
-                                                                                              private_nh(private_nh) {
+RosToOscc::RosToOscc(rclcpp::Node::SharedPtr public_nh) : public_nh(public_nh) {
     sigset_t mask;
     sigset_t orig_mask;
 

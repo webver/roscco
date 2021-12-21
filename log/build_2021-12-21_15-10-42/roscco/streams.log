@@ -1,0 +1,118 @@
+[0.014s] Invoking command in '/home/roman/dev_ws/src/roscco/build/roscco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/roman/dev_ws/src/roscco -DVEHICLE=kia_soul -DEXAMPLE=ON -DCMAKE_INSTALL_PREFIX=/home/roman/dev_ws/src/roscco/install/roscco
+[0.036s] -- VEHICLE='kia_soul'
+[0.038s] -- Found ament_cmake: 1.1.4 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.066s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.066s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.153s] -- Found rclcpp: 9.1.0 (/opt/ros/galactic/share/rclcpp/cmake)
+[0.200s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.206s] -- Found rosidl_adapter: 2.2.1 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.297s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.331s] -- Found FastRTPS: /opt/ros/galactic/include  
+[0.410s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.473s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[0.475s] -- Found rmw_cyclonedds_cpp: 0.22.3 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[0.495s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.498s] -- Looking for pthread.h
+[0.583s] -- Looking for pthread.h - found
+[0.584s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.673s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[0.673s] -- Looking for pthread_create in pthreads
+[0.746s] -- Looking for pthread_create in pthreads - not found
+[0.746s] -- Looking for pthread_create in pthread
+[0.828s] -- Looking for pthread_create in pthread - found
+[0.829s] -- Found Threads: TRUE  
+[0.980s] -- Found sensor_msgs: 2.2.3 (/opt/ros/galactic/share/sensor_msgs/cmake)
+[1.097s] -- Found roscco_interfaces: 0.0.0 (/home/roman/dev_ws/install/roscco_interfaces/share/roscco_interfaces/cmake)
+[1.128s] -- Found ament_lint_auto: 0.10.6 (/opt/ros/galactic/share/ament_lint_auto/cmake)
+[1.197s] -- Configuring done
+[1.218s] -- Generating done
+[1.220s] -- Build files have been written to: /home/roman/dev_ws/src/roscco/build/roscco
+[1.229s] Invoked command in '/home/roman/dev_ws/src/roscco/build/roscco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/roman/dev_ws/src/roscco -DVEHICLE=kia_soul -DEXAMPLE=ON -DCMAKE_INSTALL_PREFIX=/home/roman/dev_ws/src/roscco/install/roscco
+[1.230s] Invoking command in '/home/roman/dev_ws/src/roscco/build/roscco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/roman/dev_ws/src/roscco/build/roscco -- -j8 -l8
+[1.278s] [35m[1mScanning dependencies of target roscco_teleop[0m
+[1.278s] [35m[1mScanning dependencies of target oscc_api[0m
+[1.290s] [ 10%] [32mBuilding C object CMakeFiles/oscc_api.dir/oscc/api/src/oscc.c.o[0m
+[1.314s] [01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:[m[K In function ‘[01m[Koscc_close[m[K’:
+[1.314s] [01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:108:40:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kchannel[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.314s]   108 | oscc_result_t oscc_close( [01;35m[Kunsigned int channel[m[K )
+[1.315s]       |                           [01;35m[K~~~~~~~~~~~~~^~~~~~~[m[K
+[1.315s] [01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:[m[K In function ‘[01m[Koscc_update_status[m[K’:
+[1.315s] [01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:459:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksig[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.315s]   459 | void oscc_update_status( [01;35m[Kint sig[m[K, siginfo_t *siginfo, void *context )
+[1.315s]       |                          [01;35m[K~~~~^~~[m[K
+[1.315s] [01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:459:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksiginfo[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.315s]   459 | void oscc_update_status( int sig, [01;35m[Ksiginfo_t *siginfo[m[K, void *context )
+[1.315s]       |                                   [01;35m[K~~~~~~~~~~~^~~~~~~[m[K
+[1.315s] [01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:459:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcontext[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.316s]   459 | void oscc_update_status( int sig, siginfo_t *siginfo, [01;35m[Kvoid *context[m[K )
+[1.316s]       |                                                       [01;35m[K~~~~~~^~~~~~~[m[K
+[1.316s] [01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:[m[K In function ‘[01m[Kconstruct_interfaces_list[m[K’:
+[1.316s] [01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:971:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[1.316s]   971 |         for ( i = 0; i [01;35m[K<[m[K lines; i++ )
+[1.317s]       |                        [01;35m[K^[m[K
+[1.317s] [01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:994:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[1.317s]   994 |         while ( size [01;35m[K<[m[K lines && fgets( buffer, sizeof( buffer ), file_handler ) ) {
+[1.317s]       |                      [01;35m[K^[m[K
+[1.317s] [01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:[m[K In function ‘[01m[Kget_device_name[m[K’:
+[1.317s] [01m[K/home/roman/dev_ws/src/roscco/oscc/api/src/oscc.c:1078:18:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Knew_name[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+[1.317s]  1078 |             char [01;35m[Knew_name[m[K[IFNAMSIZ];
+[1.317s]       |                  [01;35m[K^~~~~~~~[m[K
+[1.326s] [ 20%] [32mBuilding CXX object CMakeFiles/roscco_teleop.dir/example/roscco_teleop.cpp.o[0m
+[1.369s] [ 30%] [32m[1mLinking C static library liboscc_api.a[0m
+[1.400s] [ 30%] Built target oscc_api
+[1.411s] [35m[1mScanning dependencies of target roscco_oscc_to_ros[0m
+[1.411s] [35m[1mScanning dependencies of target roscco_ros_to_oscc[0m
+[1.456s] [ 50%] [32mBuilding CXX object CMakeFiles/roscco_ros_to_oscc.dir/src/ros_to_oscc.cpp.o[0m
+[1.456s] [ 50%] [32mBuilding CXX object CMakeFiles/roscco_oscc_to_ros.dir/src/oscc_to_ros.cpp.o[0m
+[7.640s] [ 60%] [32m[1mLinking CXX static library libroscco_oscc_to_ros.a[0m
+[7.722s] [ 60%] Built target roscco_oscc_to_ros
+[10.677s] [ 70%] [32m[1mLinking CXX executable roscco_teleop[0m
+[11.117s] [ 70%] Built target roscco_teleop
+[15.285s] [ 80%] [32m[1mLinking CXX static library libroscco_ros_to_oscc.a[0m
+[15.554s] [ 80%] Built target roscco_ros_to_oscc
+[15.565s] [35m[1mScanning dependencies of target roscco_node[0m
+[15.616s] [ 90%] [32mBuilding CXX object CMakeFiles/roscco_node.dir/src/roscco_node.cpp.o[0m
+[18.333s] [100%] [32m[1mLinking CXX executable roscco_node[0m
+[19.160s] [100%] Built target roscco_node
+[19.176s] Invoked command in '/home/roman/dev_ws/src/roscco/build/roscco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/roman/dev_ws/src/roscco/build/roscco -- -j8 -l8
+[19.234s] Invoking command in '/home/roman/dev_ws/src/roscco/build/roscco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/roman/dev_ws/src/roscco/build/roscco
+[19.243s] -- Install configuration: ""
+[19.243s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/share/ament_index/resource_index/package_run_dependencies/roscco
+[19.243s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/share/ament_index/resource_index/parent_prefix_path/roscco
+[19.244s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/share/roscco/environment/ament_prefix_path.sh
+[19.244s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/share/roscco/environment/ament_prefix_path.dsv
+[19.244s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/share/roscco/environment/path.sh
+[19.244s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/share/roscco/environment/path.dsv
+[19.244s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/share/roscco/local_setup.bash
+[19.244s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/share/roscco/local_setup.sh
+[19.244s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/share/roscco/local_setup.zsh
+[19.245s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/share/roscco/local_setup.dsv
+[19.245s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/share/roscco/package.dsv
+[19.245s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/share/ament_index/resource_index/packages/roscco
+[19.245s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/share/roscco/cmake/rosccoConfig.cmake
+[19.245s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/share/roscco/cmake/rosccoConfig-version.cmake
+[19.245s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/share/roscco/package.xml
+[19.246s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/liboscc_api.a
+[19.246s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/bin/roscco_node
+[19.254s] -- Set runtime path of "/home/roman/dev_ws/src/roscco/install/roscco/bin/roscco_node" to ""
+[19.254s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/libroscco_oscc_to_ros.a
+[19.258s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/libroscco_ros_to_oscc.a
+[19.277s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/roscco
+[19.277s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/roscco/ros_to_oscc.h
+[19.277s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/roscco/oscc_to_ros.h
+[19.277s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/roscco/pid_control.h
+[19.277s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/include
+[19.277s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/include/oscc.h
+[19.277s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/include/dtc.h
+[19.279s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/include/vehicles.h
+[19.279s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/include/can_protocols
+[19.279s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/include/can_protocols/throttle_can_protocol.h
+[19.279s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/include/can_protocols/fault_can_protocol.h
+[19.279s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/include/can_protocols/magic.h
+[19.279s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/include/can_protocols/brake_can_protocol.h
+[19.279s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/include/can_protocols/steering_can_protocol.h
+[19.279s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/include/vehicles
+[19.280s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/include/vehicles/kia_soul_petrol.h
+[19.280s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/include/vehicles/kia_soul_ev.h
+[19.280s] -- Installing: /home/roman/dev_ws/src/roscco/install/roscco/lib/roscco/include/vehicles/kia_niro.h
+[19.283s] Invoked command in '/home/roman/dev_ws/src/roscco/build/roscco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/roman/dev_ws/src/roscco/build/roscco

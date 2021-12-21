@@ -1,0 +1,27 @@
+[0.013s] Invoking command in '/home/roman/dev_ws/src/roscco/build/roscco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/roman/dev_ws/src/roscco -DCMAKE_INSTALL_PREFIX=/home/roman/dev_ws/src/roscco/install/roscco
+[0.116s] -- The C compiler identification is GNU 9.3.0
+[0.181s] -- The CXX compiler identification is GNU 9.3.0
+[0.192s] -- Check for working C compiler: /usr/bin/cc
+[0.282s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.284s] -- Detecting C compiler ABI info
+[0.370s] -- Detecting C compiler ABI info - done
+[0.383s] -- Detecting C compile features
+[0.384s] -- Detecting C compile features - done
+[0.387s] -- Check for working CXX compiler: /usr/bin/c++
+[0.480s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.481s] -- Detecting CXX compiler ABI info
+[0.583s] -- Detecting CXX compiler ABI info - done
+[0.600s] -- Detecting CXX compile features
+[0.601s] -- Detecting CXX compile features - done
+[0.602s] -- VEHICLE=''
+[0.602s] CMake Error at oscc/firmware/cmake/OsccConfig.cmake:34 (message):
+[0.602s]   No platform selected, available platforms are:
+[0.602s]   kia_soul;kia_soul_ev;kia_niro
+[0.602s] Call Stack (most recent call first):
+[0.602s]   oscc/api/OsccConfig.cmake:1 (include)
+[0.602s]   CMakeLists.txt:8 (include)
+[0.602s] 
+[0.602s] 
+[0.603s] -- Configuring incomplete, errors occurred!
+[0.603s] See also "/home/roman/dev_ws/src/roscco/build/roscco/CMakeFiles/CMakeOutput.log".
+[0.605s] Invoked command in '/home/roman/dev_ws/src/roscco/build/roscco' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/roman/dev_ws/src/roscco -DCMAKE_INSTALL_PREFIX=/home/roman/dev_ws/src/roscco/install/roscco

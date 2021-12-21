@@ -22,8 +22,6 @@ extern "C" {
 
 static rclcpp::Node::SharedPtr public_nh;
 
-static rclcpp::Node::SharedPtr private_nh;
-
 static rclcpp::Publisher<roscco_interfaces::msg::BrakeReport>::SharedPtr topic_brake_report_;
 
 static rclcpp::Publisher<roscco_interfaces::msg::SteeringReport>::SharedPtr topic_steering_report_;
@@ -45,7 +43,7 @@ public:
      * @param public_nh  The public node handle to use for ROS publishers.
      * @param private_nh The private node handle for ROS parameters.
      */
-    OsccToRos(rclcpp::Node::SharedPtr public_nh, rclcpp::Node::SharedPtr private_nh);
+    OsccToRos(rclcpp::Node::SharedPtr public_nh);
 
     /**
      * @brief Callback function to publish oscc_steering_report messages on ROS.

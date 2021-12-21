@@ -1,0 +1,4 @@
+source;share/roscco/local_setup.bash
+source;share/roscco/local_setup.dsv
+source;share/roscco/local_setup.sh
+source;share/roscco/local_setup.zsh

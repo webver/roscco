@@ -1,0 +1,2 @@
+/usr/bin/ar qc liboscc_api.a  CMakeFiles/oscc_api.dir/oscc/api/src/oscc.c.o
+/usr/bin/ranlib liboscc_api.a

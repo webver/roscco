@@ -1,0 +1,8 @@
+CMake Error at oscc/firmware/cmake/OsccConfig.cmake:34 (message):
+  No platform selected, available platforms are:
+  kia_soul;kia_soul_ev;kia_niro
+Call Stack (most recent call first):
+  oscc/api/OsccConfig.cmake:1 (include)
+  CMakeLists.txt:8 (include)
+
+

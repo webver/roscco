@@ -1,9 +1,8 @@
 #include <roscco/oscc_to_ros.h>
 
-OsccToRos::OsccToRos(rclcpp::Node::SharedPtr public_nh_, rclcpp::Node::SharedPtr private_nh_){
+OsccToRos::OsccToRos(rclcpp::Node::SharedPtr public_nh_){
     //Update static members
     public_nh = public_nh_;
-    private_nh = private_nh_;
 
     sigset_t mask;
     sigset_t orig_mask;

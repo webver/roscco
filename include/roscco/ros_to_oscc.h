@@ -24,7 +24,7 @@ public:
      * @param public_nh  The public node handle to use for ROS subscribers.
      * @param private_nh The private node handle for ROS parameters.
      */
-    RosToOscc(rclcpp::Node::SharedPtr public_nh, rclcpp::Node::SharedPtr private_nh);
+    RosToOscc(rclcpp::Node::SharedPtr public_nh);
 
     /**
      * @brief Callback function to publish ROS BrakeCommand messages to OSCC.
@@ -64,8 +64,6 @@ public:
 
 private:
     rclcpp::Node::SharedPtr public_nh;
-
-    rclcpp::Node::SharedPtr private_nh;
 
     rclcpp::Subscription<roscco_interfaces::msg::BrakeCommand>::SharedPtr topic_brake_command_;
 

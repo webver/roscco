@@ -1,0 +1,2 @@
+/usr/bin/ar qc libroscco_ros_to_oscc.a  CMakeFiles/roscco_ros_to_oscc.dir/src/ros_to_oscc.cpp.o
+/usr/bin/ranlib libroscco_ros_to_oscc.a
