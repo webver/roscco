@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from roscco/msg/SteeringReportData.msg
+// generated code does not contain a copyright notice
+
+
+module roscco {
+  module msg {
+    typedef uint8 uint8__2[2];
+    typedef uint8 uint8__3[3];
+    struct SteeringReportData {
+      uint8__2 magic;
+
+      uint8 enabled;
+
+      uint8 operator_override;
+
+      uint8 dtcs;
+
+      uint8__3 reserved;
+    };
+  };
+};

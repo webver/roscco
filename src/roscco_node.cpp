@@ -4,48 +4,43 @@ extern "C" {
 #include <oscc.h>
 }
 
-#include <ros/ros.h>
+#include "rclcpp/rclcpp.hpp"
 
 #include <roscco/oscc_to_ros.h>
 #include <roscco/ros_to_oscc.h>
 
-int main(int argc, char* argv[])
-{
-  ros::init(argc, argv, "roscco_node");
+int main(int argc, char *argv[]) {
+    rclcpp::init(argc, argv);
+    auto public_nh = rclcpp::Node::make_shared("roscco_node");
+    auto private_nh = rclcpp::Node::make_shared("~");
 
-  ros::NodeHandle public_nh;
-  ros::NodeHandle private_nh("~");
+    int can_channel = 0;
+//    private_nh->set_parameter("can_channel", can_channel, 0);
 
-  int can_channel;
-  private_nh.param<int>("can_channel", can_channel, 0);
+    oscc_result_t ret = OSCC_ERROR;
 
-  oscc_result_t ret = OSCC_ERROR;
+    ret = oscc_init();
 
-  ret = oscc_init();
+    if (ret != OSCC_OK) {
+        RCLCPP_INFO(public_nh->get_logger(), "Could not initialize OSCC");
+    }
 
-  if (ret != OSCC_OK)
-  {
-    ROS_ERROR("Could not initialize OSCC");
-  }
+    RosToOscc subcriber(public_nh, private_nh);
+    OsccToRos publisher(public_nh, private_nh);
 
-  RosToOscc subcriber(&public_nh, &private_nh);
-  OsccToRos publisher(&public_nh, &private_nh);
+    rclcpp::spin(public_nh);
 
-  ros::spin();
+    ret = oscc_disable();
 
-  ret = oscc_disable();
+    if (ret != OSCC_OK) {
+        RCLCPP_ERROR(public_nh->get_logger(), "Could not disable OSCC");
+    }
 
-  if (ret != OSCC_OK)
-  {
-    ROS_ERROR("Could not disable OSCC");
-  }
+    ret = oscc_close(can_channel);
 
-  ret = oscc_close(can_channel);
+    if (ret != OSCC_OK) {
+        RCLCPP_ERROR(public_nh->get_logger(), "Could not close OSCC connection");
+    }
 
-  if (ret != OSCC_OK)
-  {
-    ROS_ERROR("Could not close OSCC connection");
-  }
-
-  ros::waitForShutdown();
+    rclcpp::shutdown();
 }

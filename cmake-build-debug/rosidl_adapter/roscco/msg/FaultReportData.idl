@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from roscco/msg/FaultReportData.msg
+// generated code does not contain a copyright notice
+
+
+module roscco {
+  module msg {
+    typedef uint8 uint8__2[2];
+    struct FaultReportData {
+      uint8__2 magic;
+
+      uint32 fault_origin_id;
+
+      uint8 dtcs;
+
+      uint8 reserved;
+    };
+  };
+};
