@@ -5,5 +5,7 @@
     <mapping directory="$PROJECT_DIR$/oscc" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/roscpp_code_format" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/test/rapidcheck" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test/rapidcheck/ext/catch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test/rapidcheck/ext/googletest" vcs="Git" />
   </component>
 </project>

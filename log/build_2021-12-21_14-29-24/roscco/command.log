@@ -1,2 +1,0 @@
-Invoking command in '/home/roman/dev_ws/src/roscco/build/roscco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/roman/dev_ws/src/roscco -DCMAKE_INSTALL_PREFIX=/home/roman/dev_ws/src/roscco/install/roscco
-Invoked command in '/home/roman/dev_ws/src/roscco/build/roscco' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/roman/dev_ws/src/roscco -DCMAKE_INSTALL_PREFIX=/home/roman/dev_ws/src/roscco/install/roscco

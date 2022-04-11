@@ -13,6 +13,7 @@ extern "C" {
 #include <roscco_interfaces/msg/enable_disable.hpp>
 #include <roscco_interfaces/msg/steering_command.hpp>
 #include <roscco_interfaces/msg/throttle_command.hpp>
+#include <roscco_interfaces/msg/selector_command.hpp>
 
 class RosToOscc {
 public:
@@ -54,6 +55,15 @@ public:
     void throttleCommandCallback(const roscco_interfaces::msg::ThrottleCommand::ConstSharedPtr msg);
 
     /**
+     * @brief Callback function to publish ROS SelectorCommand messages to OSCC.
+     *
+     * This function is a callback that consumes a ROS SelectorCommand message and publishes them to the OSCC API.
+     *
+     * @param msg ROS SelectorCommand message to be consumed.
+     */
+    void selectorCommandCallback(const roscco_interfaces::msg::SelectorCommand::ConstSharedPtr msg);
+
+    /**
      * @brief Callback function to publish ROS EnableDisable messages to OSCC.
      *
      * This function is a callback that consumes a ROS EnableDisable message and publishes them to the OSCC API.
@@ -70,6 +80,8 @@ private:
     rclcpp::Subscription<roscco_interfaces::msg::SteeringCommand>::SharedPtr topic_steering_command_;
 
     rclcpp::Subscription<roscco_interfaces::msg::ThrottleCommand>::SharedPtr topic_throttle_command_;
+
+    rclcpp::Subscription<roscco_interfaces::msg::SelectorCommand>::SharedPtr topic_selector_command_;
 
     rclcpp::Subscription<roscco_interfaces::msg::EnableDisable>::SharedPtr topic_enable_disable_command_;
 };

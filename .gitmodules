@@ -1,6 +1,7 @@
 [submodule "oscc"]
 	path = oscc
-	url = https://github.com/PolySync/oscc.git
+	url = https://github.com/webver/oscc.git
+	branch = master
 [submodule "test/rapidcheck"]
 	path = test/rapidcheck
 	url = https://github.com/emil-e/rapidcheck.git

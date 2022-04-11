@@ -23,6 +23,8 @@ OsccToRos::OsccToRos(rclcpp::Node::SharedPtr public_nh_){
 
     topic_throttle_report_ = public_nh->create_publisher<roscco_interfaces::msg::ThrottleReport>("throttle_report", 10);
 
+    topic_selector_report_ = public_nh->create_publisher<roscco_interfaces::msg::SelectorReport>("selector_report", 10);
+
     topic_fault_report_ = public_nh->create_publisher<roscco_interfaces::msg::FaultReport>("fault_report", 10);
 
     topic_obd_messages_ = public_nh->create_publisher<roscco_interfaces::msg::CanFrame>("can_frame", 10);
@@ -36,6 +38,8 @@ OsccToRos::OsccToRos(rclcpp::Node::SharedPtr public_nh_){
     oscc_subscribe_to_steering_reports(steering_callback);
 
     oscc_subscribe_to_throttle_reports(throttle_callback);
+
+    oscc_subscribe_to_selector_reports(selector_callback);
 
     oscc_subscribe_to_fault_reports(fault_callback);
 
@@ -57,6 +61,12 @@ void OsccToRos::throttle_callback(oscc_throttle_report_s *report) {
     cast_callback<oscc_throttle_report_s, roscco_interfaces::msg::ThrottleReport, roscco_interfaces::msg::ThrottleReportData>(
             report,
             topic_throttle_report_);
+}
+
+void OsccToRos::selector_callback(oscc_selector_report_s *report) {
+    cast_callback<oscc_selector_report_s, roscco_interfaces::msg::SelectorReport, roscco_interfaces::msg::SelectorReportData>(
+            report,
+            topic_selector_report_);
 }
 
 template<class OSCCTYPE, class ROSMSGTYPE, class ROSDATATYPE>

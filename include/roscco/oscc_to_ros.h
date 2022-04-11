@@ -19,6 +19,8 @@ extern "C" {
 #include <roscco_interfaces/msg/steering_report_data.hpp>
 #include <roscco_interfaces/msg/throttle_report.hpp>
 #include <roscco_interfaces/msg/throttle_report_data.hpp>
+#include <roscco_interfaces/msg/selector_report.hpp>
+#include <roscco_interfaces/msg/selector_report_data.hpp>
 
 static rclcpp::Node::SharedPtr public_nh;
 
@@ -27,6 +29,8 @@ static rclcpp::Publisher<roscco_interfaces::msg::BrakeReport>::SharedPtr topic_b
 static rclcpp::Publisher<roscco_interfaces::msg::SteeringReport>::SharedPtr topic_steering_report_;
 
 static rclcpp::Publisher<roscco_interfaces::msg::ThrottleReport>::SharedPtr topic_throttle_report_;
+
+static rclcpp::Publisher<roscco_interfaces::msg::SelectorReport>::SharedPtr topic_selector_report_;
 
 static rclcpp::Publisher<roscco_interfaces::msg::FaultReport>::SharedPtr topic_fault_report_;
 
@@ -74,6 +78,16 @@ public:
      * @param report The oscc_throttle_report message to be consumed by ROS.
      */
     static void throttle_callback(oscc_throttle_report_s *report);
+
+    /**
+     * @brief Callback function to publish oscc_selector_report messages on ROS.
+     *
+     * This function is a callback that consumes oscc_selector_report messages by utilizing the OSCC callback and
+     * publishes that message with a ROS Publisher as a SelectorReport message.
+     *
+     * @param report The oscc_selector_report message to be consumed by ROS.
+     */
+    static void selector_callback(oscc_selector_report_s *report);
 
     /**
      * @brief Callback function to publish oscc_fault_report messages on ROS.

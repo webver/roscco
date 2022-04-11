@@ -27,6 +27,9 @@ RosToOscc::RosToOscc(rclcpp::Node::SharedPtr public_nh) : public_nh(public_nh) {
     topic_throttle_command_ =
             public_nh->create_subscription<roscco_interfaces::msg::ThrottleCommand>("throttle_command", 10,
                                                                                  std::bind(&RosToOscc::throttleCommandCallback, this, _1));
+    topic_selector_command_ =
+            public_nh->create_subscription<roscco_interfaces::msg::SelectorCommand>("selector_command", 10,
+                                                                                    std::bind(&RosToOscc::selectorCommandCallback, this, _1));
 
     topic_enable_disable_command_ =
             public_nh->create_subscription<roscco_interfaces::msg::EnableDisable>("enable_disable", 10,
@@ -72,6 +75,19 @@ void RosToOscc::throttleCommandCallback(const roscco_interfaces::msg::ThrottleCo
         RCLCPP_WARN(public_nh->get_logger(), "OSCC_WARNING occurred while trying send the throttle position.");
     }
 }
+
+void RosToOscc::selectorCommandCallback(const roscco_interfaces::msg::SelectorCommand::ConstSharedPtr msg) {
+    oscc_result_t ret = OSCC_ERROR;
+
+    ret = oscc_publish_selector_position(msg->selector_position);
+
+    if (ret == OSCC_ERROR) {
+        RCLCPP_ERROR(public_nh->get_logger(), "OSCC_ERROR occurred while trying send the selector position.");
+    } else if (ret == OSCC_WARNING) {
+        RCLCPP_WARN(public_nh->get_logger(), "OSCC_WARNING occurred while trying send the selector position.");
+    }
+}
+
 
 void RosToOscc::enableDisableCallback(const roscco_interfaces::msg::EnableDisable::ConstSharedPtr msg) {
     oscc_result_t ret = OSCC_ERROR;

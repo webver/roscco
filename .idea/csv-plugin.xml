@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/oscc/hardware/boards/actuator_control/polysync_actuator_v_1_2_0_MacroFab_XYRS_Data.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/oscc/hardware/boards/gateway/polysync_gateway_v_1_0_0_BOM.csv">
           <value>
             <Attribute>
